@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: private-repo-spok
+  namespace: gitops
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  type: git
+  url: git@github.com:owshq-mec/spark-on-kubernetes.git
+  sshPrivateKey: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+    QyNTUxOQAAACD3CPi2iAZa/B4c5NOpThAeW19hQQRAdnNvjM0sSBMtyAAAAJjQGl2r0Bpd
+    qwAAAAtzc2gtZWQyNTUxOQAAACD3CPi2iAZa/B4c5NOpThAeW19hQQRAdnNvjM0sSBMtyA
+    AAAECu/IZueQFnVkTobDjtHu+iC/e4m/z8rO1CSDklixEiOfcI+LaIBlr8Hhzk06lOEB5b
+    X2FBBEB2c2+MzSxIEy3IAAAAEnZpY3RvckBibGFja2RyYWdvbgECAw==
+    -----END OPENSSH PRIVATE KEY-----
+  
