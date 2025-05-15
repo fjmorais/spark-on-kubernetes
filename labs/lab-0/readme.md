@@ -51,6 +51,3 @@ K9s is a terminal-based UI to manage your Kubernetes cluster. It’s a quick and
 
 👉 [Install k9s](https://k9scli.io/topics/install/)
 
----
-
-Let me know if you want a Portuguese version too or a downloadable format (like PDF or Markdown).
