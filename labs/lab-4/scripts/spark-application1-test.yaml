@@ -16,7 +16,7 @@ spec:
     spark.hadoop.fs.s3a.secret.key: "minio123"
     spark.hadoop.fs.s3a.path.style.access: "true"
     spark.hadoop.fs.s3a.impl: "org.apache.hadoop.fs.s3a.S3AFileSystem"
-    spark.jars.packages: "org.apache.hadoop:hadoop-aws:3.3.4,com.amazonaws:aws-java-sdk-bundle:1.11.900"
+    spark.jars.packages: "org.apache.hadoop:hadoop-aws:3.3.4,com.amazonaws:aws-java-sdk-bundle:1.11.900" # essa é a modificação para simular erro no LAB
   arguments:
     - "todos" # ou: todos, orders, products, items
     - "owshq-shadow-traffic-uber-eats/kafka/orders"

@@ -2463,19 +2463,19 @@ spec:
             - name: AWS_SECRET_ACCESS_KEY
               value: "minio123"
             - name: AWS_REGION
-              value: ""
+              value: "us-east-1"
             - name: LICENSE_ID
-              value: ""
+              value: "71369663-5712-4a03-b032-6da04260a805"
             - name: LICENSE_EMAIL
-              value: ""
+              value: "fabiano.morais@outlook.com"
             - name: LICENSE_ORGANIZATION
-              value: ""
+              value: "SOHO"
             - name: LICENSE_EDITION
-              value: ""
+              value: "ShadowTraffic Free Trial"
             - name: LICENSE_EXPIRATION
-              value: ""
+              value: "2025-06-17"
             - name: LICENSE_SIGNATURE
-              value: ""
+              value: "kJg4uekx1lwQw0GeFqq+G+EgqRyx/Fwc+cILEhD6uckIYQiWB1qH+Cms/xJK9cskeR8K4J2fAKkzXmJJ3VnQ7xrn2U05OSdGBYTVVLesaHHCpGCcyfh5aLZyu9937cv93GmLeaiDvufEdfJT9O73Gu8FwZarkvPfrpZ5lzWSlqJPt6+j6Z2VmPDNW2jFYpkuIYS2cXXf0GTHdjtCzHmyhGVSTLwkf4B+PHidZG4EKeSovBi1sWfl1idB6lfWOxNjHFT06cI+cu9SH1/0Ji3bmB9l+DE2h2dXVQlQsc7t0IQlcZE29YFi6k54jmW33pWf2oOL89xlG2+lqwGQQ0doXg=="
           volumeMounts:
             - name: config-volume
               mountPath: /home/config

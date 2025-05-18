@@ -38,10 +38,17 @@ RUN mkdir -p /app
 COPY apps/ /app/
 WORKDIR /app
 
-USER ${spark_uid}
+# Add the user explicitly
+RUN id -u spark &>/dev/null || useradd -m -u 1001 spark
+
+
+#USER ${spark_uid}
 
 RUN mkdir -p /etc/metrics/conf
 COPY conf/metrics.properties /etc/metrics/conf/metrics.properties
 COPY conf/prometheus.yaml /etc/metrics/conf/prometheus.yaml
+
+# Switch to spark user
+USER spark
 
 ENTRYPOINT ["/opt/entrypoint.sh"]

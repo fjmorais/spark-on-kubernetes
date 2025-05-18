@@ -62,10 +62,15 @@ helm install minio-tenant ./src/helm-charts/tenant -f ./src/helm-charts/tenant/v
 
 ```sh
 # Navigate to the images folder src/images/spark and build the image
-docker build -t grudtnerv/spok:1.0.0 .
+#docker build -t grudtnerv/spok:1.0.0 .
+# aqui é o momento de criar a imagem.
+# vc precisa fazer o login no docker
+# o fabianomorais é o nome do login que eu tenho e onde a imagem vai ser armazenada.
+docker build -t fabianomorais/spok:1.0.0 .
 
 # Push the image to the registry
-docker push grudtnerv/spok:1.0.0 
+#docker push grudtnerv/spok:1.0.0 
+docker push fabianomorais/spok:1.0.0 
 ```
 
 
@@ -76,11 +81,23 @@ docker push grudtnerv/spok:1.0.0
 kubectl apply -f src/datagen/shadowtraffic-ubereats.yaml -n default
 ```
 
+```sh
+# Stop the shadowtraffic manifest
+kubectl delete -f src/datagen/shadowtraffic-ubereats.yaml -n default
+```
+
+
 
 ### Step 7: Run the example
 
 ```sh
 kubectl apply -f labs/lab-2/scripts/spark-application.yaml -n processing
+```
+
+# Logo em seguida execute esse comando para verificar os logs por meio do Stern
+
+```sh
+stern spark-lab1-driver -n processing
 ```
 
 

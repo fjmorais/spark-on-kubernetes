@@ -9,13 +9,13 @@ spec:
   mode: cluster
   image: grudtnerv/spok:1.0.0
   imagePullPolicy: Always
-  # mainApplicationFile: "local:///app/spark-app2-1.py"
+  #mainApplicationFile: "local:///app/spark-app2-1.py"
   mainApplicationFile: "local:///app/spark-app2-2.py"
   arguments:
-    # - "orders"
+    #  - "orders"
     # - "s3a://owshq-shadow-traffic-uber-eats"
     # - "s3a://owshq-shadow-traffic-uber-eats/parquet"
-    #- "" #ou: todos, orders, products, items
+    - "items" #ou: todos, orders, products, items
     - "owshq-shadow-traffic-uber-eats/kafka/orders"
     - "owshq-shadow-traffic-uber-eats/mysql/products"
     - "owshq-shadow-traffic-uber-eats/mongodb/items"

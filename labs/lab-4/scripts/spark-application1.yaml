@@ -9,7 +9,7 @@ spec:
   mode: cluster
   image: grudtnerv/spok:1.0.1
   imagePullPolicy: Always
-  mainApplicationFile: "s3a://owshq-shadow-traffic-uber-eats/spark-app3.py"
+  mainApplicationFile: "local:///app/spark-app3.py"
   sparkConf:
     spark.hadoop.fs.s3a.endpoint: "http://datalake-hl.deepstore:9000"
     spark.hadoop.fs.s3a.access.key: "minio"
