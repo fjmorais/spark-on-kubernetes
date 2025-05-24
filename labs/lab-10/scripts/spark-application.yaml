@@ -7,7 +7,7 @@ spec:
   type: Python
   pythonVersion: "3"
   mode: cluster
-  image: grudtnerv/spok:1.0.0
+  image: fabianomorais/spok:1.0.0
   imagePullPolicy: Always
   mainApplicationFile: "local:///repo/spark-on-kubernetes.git/labs/lab-10/scripts/spark-app4-2.py"
   sparkConf:
@@ -57,7 +57,7 @@ spec:
       - name: git-sync
         image: k8s.gcr.io/git-sync/git-sync:v4.2.4
         args:
-          - "--repo=git@github.com:owshq-mec/spark-on-kubernetes.git"
+          - "--repo=git@github.com:fjmorais/spark-on-kubernetes.git"
           - "--root=/repo"
           - "--ref=main"
           - "--depth=2"

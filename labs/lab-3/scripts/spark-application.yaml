@@ -7,7 +7,7 @@ spec:
   type: Python
   pythonVersion: "3"
   mode: cluster
-  image: grudtnerv/spok:1.0.0
+  image: fabianomorais/spok:1.0.0
   imagePullPolicy: Always
   #mainApplicationFile: "local:///app/spark-app2-1.py"
   mainApplicationFile: "local:///app/spark-app2-2.py"

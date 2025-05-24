@@ -7,7 +7,7 @@ spec:
   type: Python
   pythonVersion: "3"
   mode: cluster
-  image: grudtnerv/spok:1.0.0
+  image: fabianomorais/spok:1.0.0
   imagePullPolicy: Always
   mainApplicationFile: "s3a://owshq-shadow-traffic-uber-eats/spark-app3.py"
   sparkConf:

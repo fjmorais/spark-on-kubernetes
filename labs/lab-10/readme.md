@@ -67,10 +67,10 @@ helm install prometheus-operator ./src/helm-charts/kube-prometheus-stack -f ./sr
 
 ```sh
 # Navigate to the images folder src/images/spark and build the image
-docker build -t grudtnerv/spok:1.0.0 .
+docker build -t fabianomorais/spok:1.0.0 .
 
 # Push the image to the registry
-docker push grudtnerv/spok:1.0.0 
+docker push fabianomorais/spok:1.0.0 
 ```
 
 
